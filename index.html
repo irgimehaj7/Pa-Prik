@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pa-Prika</title>
+    <link rel="icon" href="./logo.jpg" />
+    <!-- linking with CSS -->
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <header>
+    <div id="title">
+      <img src="./logo.jpg" alt="Restaurant's logo" />
+      <h1>Pa-Prika Food Delivery</h1>
+    </div>
+  </header>
+
+  <br />
+  <br />
+
+  <body>
+    <ul id="meals">
+      <!-- 1st card -->
+      <li class="meal-item">
+        <div>
+          <img src="./assets/vegan-menu.jpeg" alt="Vegan Menu image" />
+          <div>
+            <h3>Vegan Menu</h3>
+            <p class="meal-item-price">$12.99</p>
+            <p class="meal-item-description">
+              A delicious and healthy vegan menu option. Perfect for those who
+              enjoy plant-based cuisine. This menu includes a variety of fresh
+              vegetables and plant-based proteins, making it a nutritious
+              choice.
+            </p>
+          </div>
+          <p class="meal-item-actions">
+            <button onclick="openNewTab('Vegan Menu')">Order Now</button>
+          </p>
+        </div>
+      </li>
+
+      <!-- 2nd card -->
+      <li class="meal-item">
+        <div>
+          <img src="./assets/meat-menu.jpeg" alt="Meat Menu image" />
+          <div>
+            <h3>Meat Menu</h3>
+            <p class="meal-item-price">$15.99</p>
+            <p class="meal-item-description">
+              A hearty and savory meat menu option. Bursting with flavors for
+              meat enthusiasts, our menu features a selection of premium cuts
+              and savory dishes that will undoubtedly satisfy your carnivorous
+              cravings.
+            </p>
+          </div>
+          <p class="meal-item-actions">
+            <button onclick="openNewTab('Meat Menu')">Order Now</button>
+          </p>
+        </div>
+      </li>
+
+      <!-- 3rd card -->
+      <li class="meal-item">
+        <div>
+          <img src="./assets/fish-menu.jpeg" alt="Fish Menu image" />
+          <div>
+            <h3>Fish Menu</h3>
+            <p class="meal-item-price">$17.99</p>
+            <p class="meal-item-description">
+              A delightful and fresh fish menu option. Perfect for seafood
+              lovers seeking a tasty experience. Dive into the ocean of flavors
+              with our fish menu, featuring the freshest catches and
+              mouthwatering seafood delights.
+            </p>
+          </div>
+          <p class="meal-item-actions">
+            <button onclick="openNewTab('Fish Menu')">Order Now</button>
+          </p>
+        </div>
+      </li>
+    </ul>
+  </body>
+  <!-- linking with JavaScript -->
+  <script src="app.js" defer></script>
+</html>

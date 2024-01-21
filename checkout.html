@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Checkout</title>
+    <link rel="icon" href="./logo.jpg" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css"
+    />
+  </head>
+  <body>
+    <div id="checkout-container">
+      <h1 id="menuName">Your Order</h1>
+      <form id="checkoutForm" action="#" method="post">
+        <!-- Full Name (Required) -->
+        <label for="fullName">Full Name:</label>
+        <input type="text" id="fullName" name="fullName" required />
+
+        <!-- Address (Required) -->
+        <label for="address">Address:</label>
+        <input type="text" id="address" name="address" required />
+
+        <!-- Email (Required) -->
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required />
+
+        <!-- Phone Number (Required) -->
+        <label for="phoneNumber">Phone Number:</label>
+        <input type="tel" id="phoneNumber" name="phoneNumber" required />
+
+        <!-- Message (Optional) -->
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" cols="50"></textarea>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit" />
+      </form>
+    </div>
+  </body>
+
+  <script src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+  <script>
+    const menuName = sessionStorage.getItem("menuName");
+    document.getElementById("menuName").innerText = `Your Order: ${menuName}`;
+
+    // Example of using Toastify (third party library)
+    document
+      .getElementById("checkoutForm")
+      .addEventListener("submit", function (event) {
+        event.preventDefault(); // Prevent the form from submitting
+        // Add your form submission logic here
+        // For example, showing a success toast
+        Toastify({
+          text: "Order submitted successfully!",
+          duration: 3000, // 3 seconds
+          gravity: "bottom", // Display at the bottom
+          position: "right", // Display on the right
+          backgroundColor: "#638889", // Your preferred color
+        }).showToast();
+      });
+  </script>
+</html>
